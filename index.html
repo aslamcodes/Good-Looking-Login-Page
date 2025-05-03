@@ -1,34 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="styles/loginpage.css" />
-  </head>
-  <body>
-    <div class="bg"></div>
-    <form class="form-container">
-      <div class="form-container-bg"></div>
-      <h1>Login</h1>
 
-      <div class="form-control">
-        <input class="input" type="text" id="name" placeholder=" " />
-        <label class="label" for="name">Name</label>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="styles/loginpage.css" />
+</head>
 
-      <div class="form-control">
-        <input class="input" type="password" id="password" placeholder=" " />
-        <label class="label" for="password">Password</label>
-      </div>
+<body>
+  <div class="bg"></div>
+  <form class="form-container">
+    <div class="form-container-bg"></div>
+    <h1>Login</h1>
 
-      <a class="btn" href="pages/home.html">Login</a>
-      <p class="text">
-        Don't have an account? <a href="pages/signup.html">Register</a>
-      </p>
-    </form>
+    <div class="form-control">
+      <input class="input" type="text" id="name" placeholder=" " />
+      <label class="label" for="name">Name</label>
+    </div>
 
-    <script src="../js/loginpage.js"></script>
-  </body>
+    <div class="form-control">
+      <input class="input" type="password" id="password" placeholder=" " />
+      <label class="label" for="password">Password</label>
+    </div>
+
+    <a class="btn" href="pages/home.html">Login</a>
+    <p class="text">
+      Don't have an account? <a href="pages/signup.html">Register</a>
+    </p>
+  </form>
+
+  <script>
+    const labels = document.querySelectorAll("label");
+
+    labels.forEach((label) => {
+      label.innerHTML = label.innerText
+        .split("")
+        .map((letter, idx) => {
+          return `<span class=".span" style= "transition-delay:${idx * 50
+            }ms">${letter}</span>`;
+        })
+        .join("");
+    });
+  </script>
+</body>
+
 </html>
