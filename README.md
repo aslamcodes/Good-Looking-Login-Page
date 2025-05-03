@@ -14,3 +14,5 @@ Languages Used:
   2. Javascript
   3. CSS
 
+==== EDIT - May 3, 2025 ===
+This is where it all started ❤️
